@@ -1,43 +1,31 @@
-C-x r : undo tree -> C-z
+# Emacs configuration
 
-C-<prior>: contract region
-C-<next>: expand region
-C-S-s : helm swoop
-C-c b : google this
-<f8>  : neotree
+My Emacs configuration file.
 
+## Keys
 
-ivy
-projectile
-company
-flycheck
+To show the shortcuts: `M-x cheatsheet-show`
 
-;; Package: give key candidates after a delay
-(use-package guide-key
-  :defer t
-  :diminish guide-key-mode
-  :config
-  (progn
-  (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-c"))
-  (guide-key-mode 1)))  ; Enable guide-key-mode
+## Features
 
+- MELPA & ELPA repositories
+- `use-package` for package settings
+- backup and history in `~/.emacs.d`
+- dark theme
+- highlight delimiters
+- windows move
+- expand/contract region
+- undo/redo tree
+- HELM
+- Google search
+- EVIL mode
+- IVY/company completion
+- highlight symbol
+- flycheck linting
+- dashboard
+- Projectile project manager
+- files tree view
+- Magit
+- Org mode
+- Languages: YAML, TOML, Haskell, Markdown, Go
 
-http://www.meteocity.com/france/plage/paimpol_p22162/
-;; Package: shortcuts cheatsheet
-
-(use-package cheatsheet
-  :config
-  (cheatsheet-add-group 'Basics
-    '(:key "C-x C-c" :description "close Emacs (kill-emacs to kill daemon)")
-    '(:key "C-x C-f" :description "find files (open, or :e)")
-    '(:key "C-x C-s" :description "save buffer (or :w)")
-    '(:key "C-x k"   :description "save buffers"))
-  (cheatsheet-add-group 'Macros
-    '(:key "C-x C-(" :description "start record")
-    '(:key "C-x C-)" :description "stop record")
-    '(:key "C-x C-e" :description "execute"))
-  (cheatsheet-add-group 'Windows
-    '(:key "C-x C-0" :description "close split"))
-  )
-
-TODO: origami
